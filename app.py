@@ -68,7 +68,7 @@ def handle_userinput(user_question):
 # Main function to chat with the bot
 def main():
     load_dotenv()
-    st.set_page_config(page_title="All about your PDFs",
+    st.set_page_config(page_title="All about my PDFs",
                        page_icon=":books:")
     st.write(css, unsafe_allow_html=True)
 
@@ -77,7 +77,7 @@ def main():
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = None
 
-    st.header("All about your PDFs :books:")
+    st.header("All about my PDFs :books:")
     user_question = st.text_input("Chat with me about your documents:")
     if user_question:
         handle_userinput(user_question)
